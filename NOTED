@@ -1,0 +1,42 @@
+Note Penting
+
+$emit = mentrigger event
+vuex = menggunakan computed
+
+Vuex
+1. Cara pertama bisa menggunakan akses ke state biasa secara langsung
+2. Cara kedua menggunakan method getter
+3. Menggunakan mapGetters
+
+   mapGetters agar bisa menggunakan spread operator, perlu meng install despendency baru.
+   fungsinya agar si babel compiler bisa mengkompile spread operator
+
+   -> perintahnya: npm install babel-preset-stage-2 --save-dev
+   -> edit file .babelrc dan tambahkan pada presets code berikut
+      ["stage-2"]
+
+4. Cara ke empat menggunakan mutations
+   -> Membuat method mutatiosn di store dan buat methodnya
+   -> agar lebih singkat, gunakan mapGetters di pemanggilanya
+   -> cara mutations mempunya issue, karena muations bersifat synronous,
+      artinya jika di minta value, dia langsung kasih value.
+      Jadi misal kita mau set timeput munculnya, maka mutation gak bisa dijalankan timeoutnya (delay),
+      karena sifatnya langsung nampilin valuenya
+
+
+NOTE
+Computed propertis bisa otomatis jalan pas di load page tersebut
+v-model = untuk 2 data binding
+:value = one data binding
+method = bisa jalan klo ada event
+dispatch = nga,bil method method yang ada di mutation dan action di store
+{} = artinya berupa objek,
+     contoh:
+     mapGetter({
+        objek1: 'value'
+        objek2: valueIfClassImport
+     })
+[] =  berupa array, value e menggunakan 'value1', 'value2','dll'
+
+
+
